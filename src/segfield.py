@@ -23,11 +23,16 @@ def main():
         reader = csv.reader(f, delimiter='\t')
 
         detection_set = set()
+        x_set = set()
+        y_set = set()
         for line in reader:
             line = [int(i) for i in line]
+            detection_set.add(line)
             prob = line[1]
             x = line[2]
+            x_set.add(x)
             y = line[3]
+            y_set.add(y)
             if prob > 90:
                 img[y, x] = blue
     cv2.imwrite("detections.png", img)
