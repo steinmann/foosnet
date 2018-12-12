@@ -42,7 +42,7 @@ def get_clip(video_id, offset):
 
 
 def process():
-    my_api_key = 'AIzaSyAAA2PwqB0PYBqmcS4mIAZ5Y3RpAi3sZlk'
+    my_api_key = ''
     p4p4_channel_id = 'UCRtugJkSFMQgp_22sqkFC4g'
     video_ids = get_video_ids(p4p4_channel_id, my_api_key)
     print(video_ids)
